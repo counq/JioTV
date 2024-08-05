@@ -2,11 +2,11 @@
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    $license_file = 'ankush.txt';
+    $license_file = 'counq.txt';
     $license_data = @json_decode(file_get_contents($license_file), true);
     $current_time = time();
 
-    if (!$license_data || ($current_time - $license_data['ankush']['time']) > 3600) {
+    if (!$license_data || ($current_time - $license_data['counq']['time']) > 3600) {
         $apixurl = 'https://jio-widevine.developed-by-doctor-strange.workers.dev/?id=' . $id;
         $apixheaders = ['user-agent: okhttp/4.10.0'];
 
@@ -21,10 +21,10 @@ if (isset($_GET['id'])) {
         curl_close($xcurl);
 
         $json_data = @json_decode($return, true);
-        if ($json_data['ankush']['message'] == 'success') {
-            $license = $json_data['ankush']['licence'];
+        if ($json_data['counq']['message'] == 'success') {
+            $license = $json_data['counq']['licence'];
             $ROLEX = json_encode(array(
-                "ankush" => array(
+                "counq" => array(
                     "licence" => $license,
                     "time" => $current_time
                 )
@@ -33,7 +33,7 @@ if (isset($_GET['id'])) {
             header("Location: " . $license, true, 307);
         }
     } else {
-        $license = $license_data['ankush']['licence'];
+        $license = $license_data['counq']['licence'];
         header("Location: " . $license, true, 307);
     }
 } else {
