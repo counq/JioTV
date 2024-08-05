@@ -55,7 +55,7 @@ This script allows you to watch JioTV channels using OTT Navigator. The playlist
 
 ## 🤗 Contact Us
 
-- For any queries, contact us via [Proton Mail](mailto:counq@pm.me).
+- For any queries, contact us via [Proton Mail](mailto:counq@proton.me).
 - Join our [Telegram Channel](https://t.me/counq_github) for community discussions and support.
 
 ## ⚠️ License and Disclosures
