@@ -1,6 +1,5 @@
 
 ```markdown
-<img src="https://castlabs.com/wp-content/uploads/widevine-logo.svg" width="120">
 
 # JioTV Script
 
